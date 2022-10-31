@@ -1,6 +1,6 @@
 <template>
   <div v-bind:class="[this.$store.state.equipPopupClosed.closed ? 'equip-popup' : 'equip-popup equip-popup_opened']">
-    <div v-for="(equipItem, i) in armor[this.$store.getters.equipPopupClosedType].slice(0, visibleItems ? 5 : 25)" :key="i">
+    <div v-for="(equipItem, i) in armor[this.$store.getters.equipPopupClosedType]?.slice(0, visibleItems ? 5 : 25)" :key="i">
       <SelectItem :item="equipItem" :type="$store.getters.equipPopupClosedType" />
     </div>
     <button @click="closeEquipPopup" class="equip-popup__close-btn">x</button>
@@ -11,12 +11,14 @@
 <script>
 import SelectItem from './SelectItem.vue';
 import { armor } from '../data/armor';
+import { jewelry } from '../data/jewelry';
 
 export default {
   //equipItem.title.split(' ')[0].toLowerCase()
   data() {
     return {
       armor,
+      jewelry,
       visibleItems: true
     };
   },
@@ -32,9 +34,9 @@ export default {
   components: {
     SelectItem
   },
-  // mounted() {
-  //   this.type = this.$store.state.equipPopupClosed.type
-  // }
+  mounted() {
+    
+  }
 }
 </script>
 

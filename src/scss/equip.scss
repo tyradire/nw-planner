@@ -1,9 +1,10 @@
 .equip {
-  max-width: 976px;
+  max-width: 1000px;
   padding: 12px;
   margin: 20px auto;
   background-color: #2a2c2c;
   display: flex;
+  justify-content: space-between;
   border-radius: 12px;
 }
 
@@ -12,7 +13,11 @@
   display: flex;
 }
 
-.equip__armor-item {
+.equip__jewelry {
+  display: flex;
+}
+
+.equip__item {
   cursor: pointer;
   margin-left: 5px;
   width: 50px;

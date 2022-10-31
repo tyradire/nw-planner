@@ -1,5 +1,5 @@
 <template>
-  <div @click="openEquipList" class="equip__armor-item" >
+  <div @click="openEquipList" class="equip__item" >
     <img :src="this.item.icon" :alt="this.item.title" />
   </div>
 </template>

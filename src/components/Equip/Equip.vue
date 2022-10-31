@@ -7,6 +7,11 @@
       <EquipItem :item="this.$store.state.legsEquiped" :type="'legs'" />
       <EquipItem :item="this.$store.state.feetEquiped" :type="'feet'" />
     </div>
+    <div class="equip__jewelry">
+      <EquipItem :item="this.$store.state.amulEquiped" :type="'amul'" />
+      <EquipItem :item="this.$store.state.ringEquiped" :type="'ring'" />
+      <EquipItem :item="this.$store.state.earEquiped" :type="'ear'" />
+    </div>
     <EquipPopup />
   </div>
 </template>

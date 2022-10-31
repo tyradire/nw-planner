@@ -243,11 +243,31 @@ export const constitutionPerks = [
     'All health consumables 20% stronger',
     'Increase max health by 10% of physical armour',
     '-10% crit damage taken',
+    '+10% logging speed',
+    '-10% reduction on tool durability loss',
+    '-10% decrease in weight of logging items'
+  ],
+  [
+    'All health consumables 20% stronger',
+    'Increase max health by 10% of physical armour',
+    '-10% crit damage taken',
     '+20% armour',
     '+10% logging speed',
     '-10% reduction on tool durability loss',
     '-10% decrease in weight of logging items',
     '+10% logging speed'
+  ],
+  [
+    'All health consumables 20% stronger',
+    'Increase max health by 10% of physical armour',
+    '-10% crit damage taken',
+    '+20% armour',
+    '-80% damage reduction when at full health (60s cooldown)',
+    '+10% logging speed',
+    '-10% reduction on tool durability loss',
+    '-10% decrease in weight of logging items',
+    '+10% logging speed',
+    '+10% logging yield increase',
   ],
   [
     'All health consumables 20% stronger',

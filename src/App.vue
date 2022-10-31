@@ -23,7 +23,6 @@ import Stats from './components/Stats/Stats.vue';
 import Dashboard from './components/Dashboard.vue';
 import Equip from './components/Equip/Equip.vue';
 import StatPerks from './components/Stats/StatPerks.vue';
-
 export default {
   data() {
     return {

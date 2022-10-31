@@ -49,29 +49,47 @@ export const store = new Vuex.Store({
       stats: {str: 0, dex: 0, int: 0, foc: 0, con: 0},
       id: 'ftdef'
     },
+    amulEquiped: {
+      title: 'Amulet',
+      icon: require('../assets/inventory/amul.png'),
+      stats: {str: 0, dex: 0, int: 0, foc: 0, con: 0},
+      id: 'amdef'
+    },
+    ringEquiped: {
+      title: 'Ring',
+      icon: require('../assets/inventory/ring.png'),
+      stats: {str: 0, dex: 0, int: 0, foc: 0, con: 0},
+      id: 'rndef'
+    },
+    earEquiped: {
+      title: 'Earring',
+      icon: require('../assets/inventory/earring.png'),
+      stats: {str: 0, dex: 0, int: 0, foc: 0, con: 0},
+      id: 'erdef'
+    },
   },
   getters: {
     equipPopupClosedType: function (state) {
       return state.equipPopupClosed.type;
     },
     strengthIndex: function (state) {
-      if (state.strength > 300) { return 6 }
+      if (state.strength > 300) { return 5 }
       else return Math.floor((state.strength/50) - 1)
     },
     dexterityIndex: function (state) {
-      if (state.dexterity > 300) { return 6 }
+      if (state.dexterity > 300) { return 5 }
       else return Math.floor((state.dexterity/50) - 1)
     },
     intelligenceIndex: function (state) {
-      if (state.intelligence > 300) { return 6 }
+      if (state.intelligence > 300) { return 5 }
       else return Math.floor((state.intelligence/50) - 1)
     },
     focusIndex: function (state) {
-      if (state.focus > 300) { return 6 }
+      if (state.focus > 300) { return 5 }
       else return Math.floor((state.focus/50) - 1)
     },
     constitutionIndex: function (state) {
-      if (state.constitution > 300) { return 6 }
+      if (state.constitution > 300) { return 5 }
       else return Math.floor((state.constitution/50) - 1)
     },
     groupEquip: function (state) {
@@ -141,6 +159,9 @@ export const store = new Vuex.Store({
       const handItem = armor.hand.filter(item => item.id == payload.equipData.hand)[0];
       const legsItem = armor.legs.filter(item => item.id == payload.equipData.legs)[0];
       const feetItem = armor.feet.filter(item => item.id == payload.equipData.feet)[0];
+      const amulItem = armor.feet.filter(item => item.id == payload.equipData.amul)[0];
+      const ringItem = armor.feet.filter(item => item.id == payload.equipData.ring)[0];
+      const earItem = armor.feet.filter(item => item.id == payload.equipData.ear)[0];
       state.headEquiped = {
         title: headItem.title, 
         icon: headItem.icon, 
@@ -200,7 +221,43 @@ export const store = new Vuex.Store({
                 con: feetItem.stats.con
                },
         id: feetItem.id
-      }
+      },
+      state.amulEquiped = {
+        title: amulItem.title, 
+        icon: amulItem.icon, 
+        stats: {
+                str: amulItem.stats.str, 
+                dex: amulItem.stats.dex, 
+                foc: amulItem.stats.foc,
+                int: amulItem.stats.int,
+                con: amulItem.stats.con
+               },
+        id: amulItem.id
+      },
+      state.ringEquiped = {
+        title: ringItem.title, 
+        icon: ringItem.icon, 
+        stats: {
+                str: ringItem.stats.str, 
+                dex: ringItem.stats.dex, 
+                foc: ringItem.stats.foc,
+                int: ringItem.stats.int,
+                con: ringItem.stats.con
+               },
+        id: ringItem.id
+      },
+      state.earEquiped = {
+        title: earItem.title, 
+        icon: earItem.icon, 
+        stats: {
+                str: earItem.stats.str, 
+                dex: earItem.stats.dex, 
+                foc: earItem.stats.foc,
+                int: earItem.stats.int,
+                con: earItem.stats.con
+               },
+        id: earItem.id
+      },
       store.commit("calculateHealth");
     },
     downloadData(state, payload) {
@@ -231,6 +288,9 @@ export const store = new Vuex.Store({
       state.handEquiped.stats = {str: 0, dex: 0, int: 0, foc: 0, con: 0};
       state.legsEquiped.stats = {str: 0, dex: 0, int: 0, foc: 0, con: 0};
       state.feetEquiped.stats = {str: 0, dex: 0, int: 0, foc: 0, con: 0};
+      state.amulEquiped.stats = {str: 0, dex: 0, int: 0, foc: 0, con: 0};
+      state.ringEquiped.stats = {str: 0, dex: 0, int: 0, foc: 0, con: 0};
+      state.earEquiped.stats = {str: 0, dex: 0, int: 0, foc: 0, con: 0};
       state.statsEquiped = {
         strength: 0, dexterity: 0, intelligence: 0, focus: 0, constitution: 0
       }
@@ -239,6 +299,9 @@ export const store = new Vuex.Store({
       state.handEquiped.icon = require('../assets/inventory/hand.png');
       state.legsEquiped.icon = require('../assets/inventory/legs.png');
       state.feetEquiped.icon = require('../assets/inventory/feet.png');
+      state.amulEquiped.icon = require('../assets/inventory/amul.png');
+      state.ringEquiped.icon = require('../assets/inventory/ring.png');
+      state.earEquiped.icon = require('../assets/inventory/earring.png');
     },
     togglePopup(state) {
       state.savePopupClosed = !state.savePopupClosed;

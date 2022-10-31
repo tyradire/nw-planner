@@ -4,7 +4,7 @@
       <SelectItem :item="equipItem" :type="$store.getters.equipPopupClosedType" />
     </div>
     <button @click="closeEquipPopup" class="equip-popup__close-btn">x</button>
-    <button @click="toggleVisibleItems" class="equip-popup__open-btn">all items</button>
+    <button @click="toggleVisibleItems" class="equip-popup__open-btn">{{visibleItems ? 'all items' : 'hide items'}}</button>
   </div>
 </template>
 

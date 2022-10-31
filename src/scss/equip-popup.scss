@@ -32,16 +32,12 @@
 .equip-popup__open-btn {
   width: 100%;
   cursor: pointer;
-  background-color: transparent;
+  background-color: #525252;
   border: none;
   margin: 0 auto;
   color: #ffffc6;
   border: 1px solid transparent;
   border-radius: 0 0 6px 6px;
-
-  &:hover {
-    border: 1px solid #ffffc6;
-  }
 }
 
 .equip-popup__item {

@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@100;300;400;500;600;700;800;900&display=swap');
+
+#app {
+  font-family: 'Saira Semi Condensed', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #ffffff;
+  background-color: #272828;
+  width: 100%;
+  min-height: calc(100vh - 60px);
+  padding-top: 60px;
+}
+
+.app-container {
+  width: 1000px;
+  height: auto;
+  background-color: #2a2c2c;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
+.app-container__attributes {
+  display: flex;
+}
+
+.app-container__perks-btn {
+  width: 100%;
+  margin: 0 auto;
+  cursor: pointer;
+  border: none;
+  padding: 6px 0;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #323232;
+  border-radius: 0 0 12px 12px;
+}
+
+.app-container__perks-btn_active {
+  background: linear-gradient(-30deg, #272828, #323232, #272828, #323232);
+	background-size: 400% 400%;
+	animation: gradient 3s ease-in-out infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

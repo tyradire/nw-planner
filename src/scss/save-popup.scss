@@ -1,0 +1,172 @@
+.save-popup {
+  position: absolute;
+  top: 30%;
+  left: calc(50% - 160px);
+  display: none;
+  align-items: flex-start;
+  width: 308px;
+  height: 200px;
+  color: #ffffff;
+  background-color: #414141;
+  border-radius: 6px;
+}
+
+.save-popup_opened {
+  display: flex;
+}
+
+.save-popup__slot-container {
+  margin-top: 14px;
+  margin-left: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.save-popup__triangle {
+  margin: 5px 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 20px 10px 20px;
+  border-color: transparent transparent #414141 transparent;
+}
+
+.save-popup__triangle_saving {
+  border-color: transparent transparent #002b00 transparent;
+}
+
+.save-popup__triangle_full {
+  border-color: transparent transparent #c6bc63 transparent;
+}
+
+.save-popup__triangle_clear {
+  border-color: transparent transparent #936b68 transparent;
+}
+
+.save-popup__slot {
+  width: 80px;
+  height: 100px;
+  background-color: #707072;
+  border-radius: 2px 2px 8px 8px;
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 4px solid #9e9e9e;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.save-popup__slot_saved {
+  background-color: rgb(74, 131, 74);
+  border-bottom: 4px solid rgb(116, 218, 116);
+  animation: saveBtnAnimation 1s infinite ease;
+  & svg path:last-of-type {
+    fill: rgb(0, 43, 0);
+  }
+}
+
+.save-popup__slot_full {
+  background-color: #fff6a7;
+  border-bottom: 4px solid #c6bc63;
+  & svg path:last-of-type {
+    fill: #c6bc63;
+  }
+}
+
+.save-popup__slot_clear {
+  background-color: #7c4747;
+  border-bottom: 4px solid #936b68;
+  & svg path:last-of-type {
+    fill: #936b68;
+  }
+}
+
+.save-popup__name {
+  margin: 5px 0 0 0;
+  font-size: 10px;
+  line-height: 1.1;
+  font-weight: 600;
+  color: #414141;
+}
+
+.save-popup__name_saving {
+  color: #002b00;
+}
+
+.save-popup__name_full {
+  color: #c6bc63;
+}
+
+.save-popup__name_clear {
+  color: #b47373;
+}
+
+.save-popup__download-btn {
+  cursor: pointer;
+  width: 84px;
+  margin-top: 10px;
+  border: none;
+  outline: none;
+  color: #414141;
+  background-color: #707072;
+  border-radius: 3px;
+  font-size: 14px;
+  padding: 2px;
+  border-bottom: 2px solid #9e9e9e;
+
+  &:hover {
+    color: #ffffff;
+  }
+}
+
+.save-popup__clear-btn {
+  cursor: pointer;
+  width: 84px;
+  margin-top: 10px;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  background-color: #7c4747;
+  border-radius: 3px;
+  font-size: 14px;
+  padding: 2px;
+  border-bottom: 2px solid #936b68;
+
+  &:hover {
+    background-color: #7e2f2f;
+  }
+}
+
+.save-popup__close-btn {
+  cursor: pointer;
+  position: absolute;
+  right: -8px;
+  top: -8px;
+  background-color: #707072;
+  border: none;
+  color: #414141;
+  border-radius: 50%;
+  font-size: 15px;
+  line-height: 1.1;
+}
+
+.save-popup__prompt {
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  color: rgb(74, 131, 74);
+}
+
+@keyframes saveBtnAnimation {
+  0% {
+    transform: translateY(0);
+  } 50% {
+    transform: translateY(-6px);
+  } 100% {
+    transform: translateY(0);
+  }
+}

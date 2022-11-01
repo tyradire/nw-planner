@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <Equip />
+    <div>
+      <Equip />
+    </div>
     <div class="app-container">
       <div class="app-container__attributes">
         <Info />

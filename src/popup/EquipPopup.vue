@@ -11,14 +11,12 @@
 <script>
 import SelectItem from './SelectItem.vue';
 import { armor } from '../data/armor';
-import { jewelry } from '../data/jewelry';
 
 export default {
-  //equipItem.title.split(' ')[0].toLowerCase()
+  
   data() {
     return {
       armor,
-      jewelry,
       visibleItems: true
     };
   },

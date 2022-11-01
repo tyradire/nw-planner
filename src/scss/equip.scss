@@ -8,6 +8,12 @@
   border-radius: 12px;
 }
 
+.equip__main {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+
 .equip__armor {
   margin-left: 10px;
   display: flex;

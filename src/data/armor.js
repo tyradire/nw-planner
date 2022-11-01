@@ -1519,4 +1519,156 @@ export const armor = {
       id: 'sccnf'
     },
   ],
+  food: [
+    {
+      title: 'Food str',
+      icon: require('../assets/inventory/food/CookStr.png'),
+      stats: {str: 40, dex: 0, int: 0, foc: 0, con: 0},
+      id: 'ckstr'
+    },
+    {
+      title: 'Food dex',
+      icon: require('../assets/inventory/food/CookDex.png'),
+      stats: {str: 0, dex: 40, int: 0, foc: 0, con: 0},
+      id: 'ckdex'
+    },
+    {
+      title: 'Food int',
+      icon: require('../assets/inventory/food/CookInt.png'),
+      stats: {str: 0, dex: 0, int: 40, foc: 0, con: 0},
+      id: 'ckint'
+    },
+    {
+      title: 'Food foc',
+      icon: require('../assets/inventory/food/CookFoc.png'),
+      stats: {str: 0, dex: 0, int: 0, foc: 40, con: 0},
+      id: 'ckfoc'
+    },
+    {
+      title: 'Food con',
+      icon: require('../assets/inventory/food/CookCon.png'),
+      stats: {str: 0, dex: 0, int: 0, foc: 0, con: 40},
+      id: 'ckcon'
+    },
+    {
+      title: 'Food str dex',
+      icon: require('../assets/inventory/food/CookStrDex.png'),
+      stats: {str: 24, dex: 16, int: 0, foc: 0, con: 0},
+      id: 'ckstd'
+    },
+    {
+      title: 'Food dex int',
+      icon: require('../assets/inventory/food/CookDexInt.png'),
+      stats: {str: 0, dex: 24, int: 16, foc: 0, con: 0},
+      id: 'ckdxi'
+    },
+    {
+      title: 'Food int foc',
+      icon: require('../assets/inventory/food/CookIntFoc.png'),
+      stats: {str: 0, dex: 0, int: 24, foc: 16, con: 0},
+      id: 'ckinf'
+    },
+    {
+      title: 'Food foc con',
+      icon: require('../assets/inventory/food/CookFocCon.png'),
+      stats: {str: 0, dex: 0, int: 0, foc: 24, con: 16},
+      id: 'ckfcn'
+    },
+    {
+      title: 'Food con str',
+      icon: require('../assets/inventory/food/CookConStr.png'),
+      stats: {str: 16, dex: 0, int: 0, foc: 0, con: 24},
+      id: 'ckcns'
+    },
+    {
+      title: 'Food str int',
+      icon: require('../assets/inventory/food/CookStrInt.png'),
+      stats: {str: 24, dex: 0, int: 16, foc: 0, con: 0},
+      id: 'cksti'
+    },
+    {
+      title: 'Food dex foc',
+      icon: require('../assets/inventory/food/CookDexFoc.png'),
+      stats: {str: 0, dex: 24, int: 0, foc: 16, con: 0},
+      id: 'ckdxf'
+    },
+    {
+      title: 'Food int con',
+      icon: require('../assets/inventory/food/CookIntCon.png'),
+      stats: {str: 0, dex: 0, int: 24, foc: 0, con: 16},
+      id: 'ckinn'
+    },
+    {
+      title: 'Food foc str',
+      icon: require('../assets/inventory/food/CookFocStr.png'),
+      stats: {str: 16, dex: 0, int: 0, foc: 24, con: 0},
+      id: 'ckfcs'
+    },
+    {
+      title: 'Food con dex',
+      icon: require('../assets/inventory/food/CookConDex.png'),
+      stats: {str: 0, dex: 16, int: 0, foc: 0, con: 24},
+      id: 'ckcnd'
+    },
+    {
+      title: 'Food str foc',
+      icon: require('../assets/inventory/food/CookStrFoc.png'),
+      stats: {str: 24, dex: 0, int: 0, foc: 16, con: 0},
+      id: 'ckstf'
+    },
+    {
+      title: 'Food dex con',
+      icon: require('../assets/inventory/food/CookDexCon.png'),
+      stats: {str: 0, dex: 24, int: 0, foc: 0, con: 16},
+      id: 'ckdxc'
+    },
+    {
+      title: 'Food int str',
+      icon: require('../assets/inventory/food/CookIntStr.png'),
+      stats: {str: 16, dex: 0, int: 24, foc: 0, con: 0},
+      id: 'ckins'
+    },
+    {
+      title: 'Food foc dex',
+      icon: require('../assets/inventory/food/CookFocDex.png'),
+      stats: {str: 0, dex: 16, int: 0, foc: 24, con: 0},
+      id: 'ckfcd'
+    },
+    {
+      title: 'Food con int',
+      icon: require('../assets/inventory/food/CookConInt.png'),
+      stats: {str: 0, dex: 0, int: 16, foc: 0, con: 24},
+      id: 'ckcni'
+    },
+    {
+      title: 'Food str con',
+      icon: require('../assets/inventory/food/CookStrCon.png'),
+      stats: {str: 24, dex: 0, int: 0, foc: 0, con: 16},
+      id: 'ckstc'
+    },
+    {
+      title: 'Food dex str',
+      icon: require('../assets/inventory/food/CookDexStr.png'),
+      stats: {str: 16, dex: 24, int: 0, foc: 0, con: 0},
+      id: 'ckdxs'
+    },
+    {
+      title: 'Food int dex',
+      icon: require('../assets/inventory/food/CookIntDex.png'),
+      stats: {str: 0, dex: 16, int: 24, foc: 0, con: 0},
+      id: 'ckind'
+    },
+    {
+      title: 'Food foc int',
+      icon: require('../assets/inventory/food/CookFocInt.png'),
+      stats: {str: 0, dex: 0, int: 16, foc: 24, con: 0},
+      id: 'ckfci'
+    },
+    {
+      title: 'Food con foc',
+      icon: require('../assets/inventory/food/CookConFoc.png'),
+      stats: {str: 0, dex: 0, int: 0, foc: 16, con: 24},
+      id: 'ckcnf'
+    },
+  ]
 }

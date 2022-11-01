@@ -62,7 +62,7 @@ export const store = new Vuex.Store({
       id: 'rndef'
     },
     earEquiped: {
-      title: 'Earring',
+      title: 'Ear',
       icon: require('../assets/inventory/earring.png'),
       stats: {str: 0, dex: 0, int: 0, foc: 0, con: 0},
       id: 'erdef'
@@ -74,10 +74,16 @@ export const store = new Vuex.Store({
       id: 'wpdef'
     },
     secondaryEquiped: {
-      title: 'Off-hand',
+      title: 'Secondary',
       icon: require('../assets/inventory/secondary.png'),
       stats: {str: 0, dex: 0, int: 0, foc: 0, con: 0},
       id: 'ofdef'
+    },
+    foodEquiped: {
+      title: 'Food',
+      icon: require('../assets/inventory/food/Cook.png'),
+      stats: {str: 0, dex: 0, int: 0, foc: 0, con: 0},
+      id: 'ckdef'
     },
   },
   getters: {
@@ -176,11 +182,12 @@ export const store = new Vuex.Store({
       const handItem = armor.hand.filter(item => item.id == payload.equipData.hand)[0];
       const legsItem = armor.legs.filter(item => item.id == payload.equipData.legs)[0];
       const feetItem = armor.feet.filter(item => item.id == payload.equipData.feet)[0];
-      const amulItem = armor.feet.filter(item => item.id == payload.equipData.amul)[0];
-      const ringItem = armor.feet.filter(item => item.id == payload.equipData.ring)[0];
-      const earItem = armor.feet.filter(item => item.id == payload.equipData.ear)[0];
-      const weaponItem = armor.feet.filter(item => item.id == payload.equipData.weapon)[0];
-      const secondaryItem = armor.feet.filter(item => item.id == payload.equipData.secondary)[0];
+      const amulItem = armor.amul.filter(item => item.id == payload.equipData.amul)[0];
+      const ringItem = armor.ring.filter(item => item.id == payload.equipData.ring)[0];
+      const earItem = armor.ear.filter(item => item.id == payload.equipData.ear)[0];
+      const weaponItem = armor.weapon.filter(item => item.id == payload.equipData.weapon)[0];
+      const secondaryItem = armor.secondary.filter(item => item.id == payload.equipData.secondary)[0];
+      const foodItem = armor.food.filter(item => item.id == payload.equipData.food)[0];
       state.headEquiped = {
         title: headItem.title, 
         icon: headItem.icon, 
@@ -301,6 +308,18 @@ export const store = new Vuex.Store({
                },
         id: secondaryItem.id
       },
+      state.foodEquiped = {
+        title: foodItem.title,
+        icon: foodItem.icon,
+        stats: {
+          str: foodItem.stats.str, 
+          dex: foodItem.stats.dex, 
+          foc: foodItem.stats.foc,
+          int: foodItem.stats.int,
+          con: foodItem.stats.con
+        },
+        id: foodItem.id
+      },
       store.commit("calculateHealth");
     },
     downloadData(state, payload) {
@@ -317,9 +336,10 @@ export const store = new Vuex.Store({
       state.feetEquiped.id = payload.equip.feet;
       state.amulEquiped.id = payload.equip.amul;
       state.ringEquiped.id = payload.equip.ring;
-      state.earEquiped.id = payload.equip.earr;
+      state.earEquiped.id = payload.equip.ear;
       state.weaponEquiped.id = payload.equip.weapon;
       state.secondaryEquiped.id = payload.equip.secondary;
+      state.foodEquiped.id = payload.equip.food;
       store.commit('downloadEquip', {equipData: payload.equip});
     },
     statReset(state) {
@@ -341,6 +361,7 @@ export const store = new Vuex.Store({
       state.earEquiped.stats = {str: 0, dex: 0, int: 0, foc: 0, con: 0};
       state.weaponEquiped.stats = {str: 0, dex: 0, int: 0, foc: 0, con: 0};
       state.secondaryEquiped.stats = {str: 0, dex: 0, int: 0, foc: 0, con: 0};
+      state.foodEquiped.stats = {str: 0, dex: 0, int: 0, foc: 0, con: 0};
       state.statsEquiped = {
         strength: 0, dexterity: 0, intelligence: 0, focus: 0, constitution: 0
       }
@@ -354,6 +375,7 @@ export const store = new Vuex.Store({
       state.earEquiped.icon = require('../assets/inventory/earring.png');
       state.weaponEquiped.icon = require('../assets/inventory/weapon.png');
       state.secondaryEquiped.icon = require('../assets/inventory/secondary.png');
+      state.foodEquiped.icon = require('../assets/inventory/food/Cook.png');
     },
     togglePopup(state) {
       state.savePopupClosed = !state.savePopupClosed;

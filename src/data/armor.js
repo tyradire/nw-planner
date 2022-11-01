@@ -1214,5 +1214,309 @@ export const armor = {
       stats: {str: 0, dex: 0, int: 0, foc: 10, con: 15},
       id: 'ercnf'
     },
-  ]
+  ],
+  weapon: [
+    {
+      title: 'Weapon str',
+      icon: require('../assets/inventory/weaponStr.png'),
+      stats: {str: 30, dex: 0, int: 0, foc: 0, con: 0},
+      id: 'wpstr'
+    },
+    {
+      title: 'Weapon dex',
+      icon: require('../assets/inventory/weaponDex.png'),
+      stats: {str: 0, dex: 30, int: 0, foc: 0, con: 0},
+      id: 'wpdex'
+    },
+    {
+      title: 'Weapon int',
+      icon: require('../assets/inventory/weaponInt.png'),
+      stats: {str: 0, dex: 0, int: 30, foc: 0, con: 0},
+      id: 'wpint'
+    },
+    {
+      title: 'Weapon foc',
+      icon: require('../assets/inventory/weaponFoc.png'),
+      stats: {str: 0, dex: 0, int: 0, foc: 30, con: 0},
+      id: 'wpfoc'
+    },
+    {
+      title: 'Weapon con',
+      icon: require('../assets/inventory/weaponCon.png'),
+      stats: {str: 0, dex: 0, int: 0, foc: 0, con: 30},
+      id: 'wpcon'
+    },
+    {
+      title: 'Weapon str dex',
+      icon: require('../assets/inventory/weaponStr.png'),
+      stats: {str: 20, dex: 10, int: 0, foc: 0, con: 0},
+      id: 'wpstd'
+    },
+    {
+      title: 'Weapon dex int',
+      icon: require('../assets/inventory/weaponDex.png'),
+      stats: {str: 0, dex: 20, int: 10, foc: 0, con: 0},
+      id: 'wpdxi'
+    },
+    {
+      title: 'Weapon int foc',
+      icon: require('../assets/inventory/weaponInt.png'),
+      stats: {str: 0, dex: 0, int: 20, foc: 10, con: 0},
+      id: 'wpinf'
+    },
+    {
+      title: 'Weapon foc con',
+      icon: require('../assets/inventory/weaponFoc.png'),
+      stats: {str: 0, dex: 0, int: 0, foc: 20, con: 10},
+      id: 'wpfcn'
+    },
+    {
+      title: 'Weapon con str',
+      icon: require('../assets/inventory/weaponCon.png'),
+      stats: {str: 10, dex: 0, int: 0, foc: 0, con: 20},
+      id: 'wpcns'
+    },
+    {
+      title: 'Weapon str int',
+      icon: require('../assets/inventory/weaponStr.png'),
+      stats: {str: 20, dex: 0, int: 10, foc: 0, con: 0},
+      id: 'wpsti'
+    },
+    {
+      title: 'Weapon dex foc',
+      icon: require('../assets/inventory/weaponDex.png'),
+      stats: {str: 0, dex: 20, int: 0, foc: 10, con: 0},
+      id: 'wpdxf'
+    },
+    {
+      title: 'Weapon int con',
+      icon: require('../assets/inventory/weaponInt.png'),
+      stats: {str: 0, dex: 0, int: 20, foc: 0, con: 10},
+      id: 'wpinn'
+    },
+    {
+      title: 'Weapon foc str',
+      icon: require('../assets/inventory/weaponFoc.png'),
+      stats: {str: 10, dex: 0, int: 0, foc: 20, con: 0},
+      id: 'wpfcs'
+    },
+    {
+      title: 'Weapon con dex',
+      icon: require('../assets/inventory/weaponCon.png'),
+      stats: {str: 0, dex: 10, int: 0, foc: 0, con: 20},
+      id: 'wpcnd'
+    },
+    {
+      title: 'Weapon str foc',
+      icon: require('../assets/inventory/weaponStr.png'),
+      stats: {str: 20, dex: 0, int: 0, foc: 10, con: 0},
+      id: 'wpstf'
+    },
+    {
+      title: 'Weapon dex con',
+      icon: require('../assets/inventory/weaponDex.png'),
+      stats: {str: 0, dex: 20, int: 0, foc: 0, con: 10},
+      id: 'wpdxc'
+    },
+    {
+      title: 'Weapon int str',
+      icon: require('../assets/inventory/weaponInt.png'),
+      stats: {str: 10, dex: 0, int: 20, foc: 0, con: 0},
+      id: 'wpins'
+    },
+    {
+      title: 'Weapon foc dex',
+      icon: require('../assets/inventory/weaponFoc.png'),
+      stats: {str: 0, dex: 10, int: 0, foc: 20, con: 0},
+      id: 'wpfcd'
+    },
+    {
+      title: 'Weapon con int',
+      icon: require('../assets/inventory/weaponCon.png'),
+      stats: {str: 0, dex: 0, int: 10, foc: 0, con: 20},
+      id: 'wpcni'
+    },
+    {
+      title: 'Weapon str con',
+      icon: require('../assets/inventory/weaponStr.png'),
+      stats: {str: 20, dex: 0, int: 0, foc: 0, con: 10},
+      id: 'wpstc'
+    },
+    {
+      title: 'Weapon dex str',
+      icon: require('../assets/inventory/weaponDex.png'),
+      stats: {str: 10, dex: 20, int: 0, foc: 0, con: 0},
+      id: 'wpdxs'
+    },
+    {
+      title: 'Weapon int dex',
+      icon: require('../assets/inventory/weaponInt.png'),
+      stats: {str: 0, dex: 10, int: 20, foc: 0, con: 0},
+      id: 'wpind'
+    },
+    {
+      title: 'Weapon foc int',
+      icon: require('../assets/inventory/weaponFoc.png'),
+      stats: {str: 0, dex: 0, int: 10, foc: 20, con: 0},
+      id: 'wpfci'
+    },
+    {
+      title: 'Weapon con foc',
+      icon: require('../assets/inventory/weaponCon.png'),
+      stats: {str: 0, dex: 0, int: 0, foc: 10, con: 20},
+      id: 'wpcnf'
+    },
+  ],
+  secondary: [
+    {
+      title: 'Secondary str',
+      icon: require('../assets/inventory/weaponStr.png'),
+      stats: {str: 30, dex: 0, int: 0, foc: 0, con: 0},
+      id: 'scstr'
+    },
+    {
+      title: 'Secondary dex',
+      icon: require('../assets/inventory/weaponDex.png'),
+      stats: {str: 0, dex: 30, int: 0, foc: 0, con: 0},
+      id: 'scdex'
+    },
+    {
+      title: 'Secondary int',
+      icon: require('../assets/inventory/weaponInt.png'),
+      stats: {str: 0, dex: 0, int: 30, foc: 0, con: 0},
+      id: 'scint'
+    },
+    {
+      title: 'Secondary foc',
+      icon: require('../assets/inventory/weaponFoc.png'),
+      stats: {str: 0, dex: 0, int: 0, foc: 30, con: 0},
+      id: 'scfoc'
+    },
+    {
+      title: 'Secondary con',
+      icon: require('../assets/inventory/weaponCon.png'),
+      stats: {str: 0, dex: 0, int: 0, foc: 0, con: 30},
+      id: 'sccon'
+    },
+    {
+      title: 'Secondary str dex',
+      icon: require('../assets/inventory/weaponStr.png'),
+      stats: {str: 20, dex: 10, int: 0, foc: 0, con: 0},
+      id: 'scstd'
+    },
+    {
+      title: 'Secondary dex int',
+      icon: require('../assets/inventory/weaponDex.png'),
+      stats: {str: 0, dex: 20, int: 10, foc: 0, con: 0},
+      id: 'scdxi'
+    },
+    {
+      title: 'Secondary int foc',
+      icon: require('../assets/inventory/weaponInt.png'),
+      stats: {str: 0, dex: 0, int: 20, foc: 10, con: 0},
+      id: 'scinf'
+    },
+    {
+      title: 'Secondary foc con',
+      icon: require('../assets/inventory/weaponFoc.png'),
+      stats: {str: 0, dex: 0, int: 0, foc: 20, con: 10},
+      id: 'scfcn'
+    },
+    {
+      title: 'Secondary con str',
+      icon: require('../assets/inventory/weaponCon.png'),
+      stats: {str: 10, dex: 0, int: 0, foc: 0, con: 20},
+      id: 'sccns'
+    },
+    {
+      title: 'Secondary str int',
+      icon: require('../assets/inventory/weaponStr.png'),
+      stats: {str: 20, dex: 0, int: 10, foc: 0, con: 0},
+      id: 'scsti'
+    },
+    {
+      title: 'Secondary dex foc',
+      icon: require('../assets/inventory/weaponDex.png'),
+      stats: {str: 0, dex: 20, int: 0, foc: 10, con: 0},
+      id: 'scdxf'
+    },
+    {
+      title: 'Secondary int con',
+      icon: require('../assets/inventory/weaponInt.png'),
+      stats: {str: 0, dex: 0, int: 20, foc: 0, con: 10},
+      id: 'scinn'
+    },
+    {
+      title: 'Secondary foc str',
+      icon: require('../assets/inventory/weaponFoc.png'),
+      stats: {str: 10, dex: 0, int: 0, foc: 20, con: 0},
+      id: 'scfcs'
+    },
+    {
+      title: 'Secondary con dex',
+      icon: require('../assets/inventory/weaponCon.png'),
+      stats: {str: 0, dex: 10, int: 0, foc: 0, con: 20},
+      id: 'sccnd'
+    },
+    {
+      title: 'Secondary str foc',
+      icon: require('../assets/inventory/weaponStr.png'),
+      stats: {str: 20, dex: 0, int: 0, foc: 10, con: 0},
+      id: 'scstf'
+    },
+    {
+      title: 'Secondary dex con',
+      icon: require('../assets/inventory/weaponDex.png'),
+      stats: {str: 0, dex: 20, int: 0, foc: 0, con: 10},
+      id: 'scdxc'
+    },
+    {
+      title: 'Secondary int str',
+      icon: require('../assets/inventory/weaponInt.png'),
+      stats: {str: 10, dex: 0, int: 20, foc: 0, con: 0},
+      id: 'scins'
+    },
+    {
+      title: 'Secondary foc dex',
+      icon: require('../assets/inventory/weaponFoc.png'),
+      stats: {str: 0, dex: 10, int: 10, foc: 20, con: 0},
+      id: 'scfcd'
+    },
+    {
+      title: 'Secondary con int',
+      icon: require('../assets/inventory/weaponCon.png'),
+      stats: {str: 0, dex: 0, int: 10, foc: 0, con: 20},
+      id: 'sccni'
+    },
+    {
+      title: 'Secondary str con',
+      icon: require('../assets/inventory/weaponStr.png'),
+      stats: {str: 20, dex: 0, int: 0, foc: 0, con: 10},
+      id: 'scstc'
+    },
+    {
+      title: 'Secondary dex str',
+      icon: require('../assets/inventory/weaponDex.png'),
+      stats: {str: 10, dex: 20, int: 0, foc: 0, con: 0},
+      id: 'scdxs'
+    },
+    {
+      title: 'Secondary int dex',
+      icon: require('../assets/inventory/weaponInt.png'),
+      stats: {str: 0, dex: 10, int: 20, foc: 0, con: 0},
+      id: 'scind'
+    },
+    {
+      title: 'Secondary foc int',
+      icon: require('../assets/inventory/weaponFoc.png'),
+      stats: {str: 0, dex: 0, int: 10, foc: 20, con: 0},
+      id: 'scfci'
+    },
+    {
+      title: 'Secondary con foc',
+      icon: require('../assets/inventory/weaponCon.png'),
+      stats: {str: 0, dex: 0, int: 0, foc: 10, con: 20},
+      id: 'sccnf'
+    },
+  ],
 }

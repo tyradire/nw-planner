@@ -67,6 +67,18 @@ export const store = new Vuex.Store({
       stats: {str: 0, dex: 0, int: 0, foc: 0, con: 0},
       id: 'erdef'
     },
+    weaponEquiped: {
+      title: 'Weapon',
+      icon: require('../assets/inventory/weapon.png'),
+      stats: {str: 0, dex: 0, int: 0, foc: 0, con: 0},
+      id: 'wpdef'
+    },
+    secondaryEquiped: {
+      title: 'Off-hand',
+      icon: require('../assets/inventory/secondary.png'),
+      stats: {str: 0, dex: 0, int: 0, foc: 0, con: 0},
+      id: 'ofdef'
+    },
   },
   getters: {
     equipPopupClosedType: function (state) {
@@ -98,7 +110,12 @@ export const store = new Vuex.Store({
         chest: state.chestEquiped.id,
         hand: state.handEquiped.id,
         legs: state.legsEquiped.id,
-        feet: state.feetEquiped.id
+        feet: state.feetEquiped.id,
+        amul: state.amulEquiped.id,
+        ring: state.ringEquiped.id,
+        ear: state.earEquiped.id,
+        weapon: state.weaponEquiped.id,
+        secondary: state.handEquiped.id
       }
       return equipSet;
     },
@@ -162,6 +179,8 @@ export const store = new Vuex.Store({
       const amulItem = armor.feet.filter(item => item.id == payload.equipData.amul)[0];
       const ringItem = armor.feet.filter(item => item.id == payload.equipData.ring)[0];
       const earItem = armor.feet.filter(item => item.id == payload.equipData.ear)[0];
+      const weaponItem = armor.feet.filter(item => item.id == payload.equipData.weapon)[0];
+      const secondaryItem = armor.feet.filter(item => item.id == payload.equipData.secondary)[0];
       state.headEquiped = {
         title: headItem.title, 
         icon: headItem.icon, 
@@ -258,6 +277,30 @@ export const store = new Vuex.Store({
                },
         id: earItem.id
       },
+      state.weaponEquiped = {
+        title: weaponItem.title, 
+        icon: weaponItem.icon, 
+        stats: {
+                str: weaponItem.stats.str, 
+                dex: weaponItem.stats.dex, 
+                foc: weaponItem.stats.foc,
+                int: weaponItem.stats.int,
+                con: weaponItem.stats.con
+               },
+        id: weaponItem.id
+      },
+      state.secondaryEquiped = {
+        title: secondaryItem.title, 
+        icon: secondaryItem.icon, 
+        stats: {
+                str: secondaryItem.stats.str, 
+                dex: secondaryItem.stats.dex, 
+                foc: secondaryItem.stats.foc,
+                int: secondaryItem.stats.int,
+                con: secondaryItem.stats.con
+               },
+        id: secondaryItem.id
+      },
       store.commit("calculateHealth");
     },
     downloadData(state, payload) {
@@ -272,6 +315,11 @@ export const store = new Vuex.Store({
       state.handEquiped.id = payload.equip.hand;
       state.legsEquiped.id = payload.equip.legs;
       state.feetEquiped.id = payload.equip.feet;
+      state.amulEquiped.id = payload.equip.amul;
+      state.ringEquiped.id = payload.equip.ring;
+      state.earEquiped.id = payload.equip.earr;
+      state.weaponEquiped.id = payload.equip.weapon;
+      state.secondaryEquiped.id = payload.equip.secondary;
       store.commit('downloadEquip', {equipData: payload.equip});
     },
     statReset(state) {
@@ -291,6 +339,8 @@ export const store = new Vuex.Store({
       state.amulEquiped.stats = {str: 0, dex: 0, int: 0, foc: 0, con: 0};
       state.ringEquiped.stats = {str: 0, dex: 0, int: 0, foc: 0, con: 0};
       state.earEquiped.stats = {str: 0, dex: 0, int: 0, foc: 0, con: 0};
+      state.weaponEquiped.stats = {str: 0, dex: 0, int: 0, foc: 0, con: 0};
+      state.secondaryEquiped.stats = {str: 0, dex: 0, int: 0, foc: 0, con: 0};
       state.statsEquiped = {
         strength: 0, dexterity: 0, intelligence: 0, focus: 0, constitution: 0
       }
@@ -302,6 +352,8 @@ export const store = new Vuex.Store({
       state.amulEquiped.icon = require('../assets/inventory/amul.png');
       state.ringEquiped.icon = require('../assets/inventory/ring.png');
       state.earEquiped.icon = require('../assets/inventory/earring.png');
+      state.weaponEquiped.icon = require('../assets/inventory/weapon.png');
+      state.secondaryEquiped.icon = require('../assets/inventory/secondary.png');
     },
     togglePopup(state) {
       state.savePopupClosed = !state.savePopupClosed;

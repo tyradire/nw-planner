@@ -12,6 +12,10 @@
       <EquipItem :item="this.$store.state.ringEquiped" :type="'ring'" />
       <EquipItem :item="this.$store.state.earEquiped" :type="'ear'" />
     </div>
+    <div class="equip__weapon">
+      <EquipItem :item="this.$store.state.weaponEquiped" :type="'weapon'" />
+      <EquipItem :item="this.$store.state.secondaryEquiped" :type="'secondary'" />
+    </div>
     <EquipPopup />
   </div>
 </template>

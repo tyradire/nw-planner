@@ -14,16 +14,15 @@
   justify-content: space-between;
 }
 
-.equip__armor {
-  margin-left: 10px;
+.equip__group {
   display: flex;
+
+  &:first-of-type {
+    margin-left: 10px;
+  }
 }
 
-.equip__jewelry {
-  display: flex;
-}
-
-.equip__weapon {
+.equip__amplifications {
   display: flex;
 }
 
@@ -44,7 +43,7 @@
   img {
     width: 100%;
     height: auto;
-    filter: grayscale(100%);
+    padding: 2px;
 
     &:hover {
       filter: grayscale(0%);
@@ -54,4 +53,30 @@
   &:hover {
     opacity: 1;
   }
+
+  &_disabled {
+    img {
+      filter: grayscale(100%);
+    }
+  }
+}
+
+.equip-shard {
+  position: relative;
+}
+
+.equip-shard__setting {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 200px;
+  height: 40px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(360deg, rgb(52, 52, 52) 0%, rgb(78, 78, 78) 100%);
+}
+
+.equip-shard__setting_opened {
+  display: flex;
 }

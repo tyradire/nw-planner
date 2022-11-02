@@ -72,9 +72,58 @@
   width: 200px;
   height: 40px;
   display: none;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   background: linear-gradient(360deg, rgb(52, 52, 52) 0%, rgb(78, 78, 78) 100%);
+}
+
+.equip-shard__item {
+  width: 220px;
+  height: 50px;
+  border: 1px solid #414141;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  background: linear-gradient(180deg, rgb(52 52 52) 0%, rgb(78 78 78) 100%);
+
+  img {
+    width: 50px;
+    height: auto;
+    padding: 2px;
+  }
+}
+
+.equip-shard__input {
+  -webkit-appearance: none;
+  width: 120px;
+  height: 8px;
+  background: repeating-linear-gradient(
+  135deg,
+  #5f5f5f 2px,
+  #000000 5px
+  );
+  border: 1px solid #7d7d7d;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.equip-shard__input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  background: #ffff7d;
+  border: 2px solid #969600;
+  cursor: pointer;
+  transform: rotate(45deg);
+}
+
+.equip-shard__value {
+  width: 16px;
+  margin: 0 0 0 10px;
 }
 
 .equip-shard__setting_opened {

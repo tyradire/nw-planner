@@ -8,6 +8,7 @@ export const store = new Vuex.Store({
 
   state: {
     availablePts: 190,
+    shardValue: 0,
     strength: 5,
     dexterity: 5,
     intelligence: 5,

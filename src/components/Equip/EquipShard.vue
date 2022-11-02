@@ -1,6 +1,6 @@
 <template>
   <div class="equip-shard">
-    <div @click="openShardPopup" class="equip-shard__item">
+    <div class="equip-shard__item">
       <input 
       type="range"
       min="0"
@@ -8,20 +8,11 @@
       step="1"
       v-model="shardValue"
       class="equip-shard__input"
+      @change="changeTest"
       />
-      <span class="equip-shard__value">{{shardValue}}</span>
+      <span class="equip-shard__value">{{this.$store.state.shardValue}}</span>
       <img src="../../assets/inventory/umbral.png" />
     </div>
-    <!-- <div v-bind:class="[shardSettingOpened ? 'equip-shard__setting' : 'equip-shard__setting equip-shard__setting_opened']">
-      <input 
-      type="range"
-      min="0"
-      max="10"
-      step="1"
-      v-model="shardValue"
-      />
-      <p>{{shardValue}}</p>
-    </div> -->
   </div>
 </template>
 
@@ -30,8 +21,7 @@
 export default {
   data() {
     return {
-      shardSettingOpened: true,
-      shardValue: 0
+      shardValue: this.$store.state.shardValue
     }
   },
   props: [
@@ -39,8 +29,11 @@ export default {
   methods: {
     openShardPopup() {
       this.shardSettingOpened = !this.shardSettingOpened
+    },
+    changeTest() {
+      this.$store.commit("setShardValue", this.shardValue);
     }
-  },
+  }
 }
 </script>
 

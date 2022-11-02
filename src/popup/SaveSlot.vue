@@ -45,6 +45,7 @@
       saveToSlot (slotLetter) {
         const statData = {
           pts: this.$store.state.availablePts,
+          shd: this.$store.state.shardValue,
           str: this.$store.state.strength,
           dex: this.$store.state.dexterity,
           int: this.$store.state.intelligence,

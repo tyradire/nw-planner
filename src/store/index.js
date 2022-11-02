@@ -164,6 +164,10 @@ export const store = new Vuex.Store({
         store.commit("calculateHealth");
       }
     },
+    setShardValue(state, payload) {
+      console.log(payload)
+      state.shardValue = payload;
+    },
     calculateHealth(state) {
       switch (Math.ceil(state.constitution/100)) {
         case 1: state.health = 5999 + ((state.constitution - 5) * 25);
@@ -325,6 +329,7 @@ export const store = new Vuex.Store({
     },
     downloadData(state, payload) {
       state.availablePts = payload.data.pts;
+      state.shardValue = payload.data.shd;
       state.strength = payload.data.str;
       state.dexterity = payload.data.dex;
       state.intelligence = payload.data.int;
@@ -345,6 +350,7 @@ export const store = new Vuex.Store({
     },
     statReset(state) {
       state.availablePts = 190;
+      state.shardValue = 0;
       state.strength = 5;
       state.dexterity = 5;
       state.intelligence = 5;
@@ -389,7 +395,6 @@ export const store = new Vuex.Store({
       state.equipPopupClosed.closed = true;
     },
     equipItem(state, payload) {
-      console.log('payload ', payload.data.stats.str)
       //вычесть из текущих статов текущую надетую шмотку
       state.strength = state.strength - state[payload.type + 'Equiped'].stats.str;
       state.dexterity = state.dexterity - state[payload.type + 'Equiped'].stats.dex;

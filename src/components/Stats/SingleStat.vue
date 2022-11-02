@@ -58,7 +58,7 @@ export default {
   },
   methods: {
   increment () {
-    if (this.$store.state.availablePts > 0) {
+    if (this.$store.state.availablePts + this.$store.state.shardValue > 0) {
       // this.$store.state[this.type] += 1;
       this.$store.commit('increment', { type: this.type })
       // if (this.type == 'constitution') {
@@ -67,7 +67,7 @@ export default {
     } else return;
   },
   incrementTen () {
-    if (this.$store.state.availablePts > 9) {
+    if (this.$store.state.availablePts + this.$store.state.shardValue > 9) {
       // this.$store.state[this.type] += 10;
       this.$store.commit('incrementTen', { type: this.type })
       if (this.type == 'constitution') {
